@@ -3,7 +3,7 @@ const APP_SECRET = "myappsecret";
 const USERNAME="admin";
 const PASSWORD = "secret";
 
-module.export = function(req,res,next) {
+module.exports = function(req,res,next) {
     if (req.url=="/login" && req.method=="POST") {
         if (req.body !=null && req.body.name ==USERNAME
         && req.body.password==PASSWORD) {

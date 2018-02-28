@@ -1,4 +1,4 @@
-module.export = function() {
+module.exports = function() {
     return {
         products:[
             { id: 1, name: "Kayak", category: "Watersports",
