@@ -6,8 +6,8 @@ import {Cart} from "../model/cart.model";
     moduleId: module.id,
     templateUrl: "cartSummary.component.html"
 })
-export class CarSummary {
+export class CartSummaryComponent {
     constructor(public cart:Cart) {
-        
+
     }
 }
