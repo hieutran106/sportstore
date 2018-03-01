@@ -30,6 +30,7 @@ export class StoreComponent {
         this.selectedPage=newPage;
     }
     changePageSize(newSize:number) {
+        //parse because select value from HTML will be string value
         this.productsPerPage = Number(newSize);
         this.changePage(1);
     }
