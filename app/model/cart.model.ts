@@ -18,10 +18,15 @@ export class Cart {
         this.recalculate();
         console.log("Hello"+this.itemCount);
     }
-    updateQuantity(product:Product, quality:number) {
+    updateQuantity(product:Product, quantity:number) {
         let line= this.lines.find(line => line.product.id==product.id);
         if (line!=undefined) {
-            line.quantity=Number(quality);
+            let newQuantity=Number(quantity);
+            if (newQuantity>0) {
+                line.quantity=Number(quantity);
+            } else {
+                line.quantity=0;
+            }
         }
         this.recalculate();
     }
