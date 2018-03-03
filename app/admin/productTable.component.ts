@@ -1,7 +1,17 @@
+import { Product } from './../model/product.model';
+import { ProductRepository } from './../model/product.repository';
 import { Component } from '@angular/core';
 @Component({
-    template:`<div class="bg-info p-a-1">
-            <h3>Product Table Placeholder</h3>
-            </div>`
+    moduleId: module.id,
+    templateUrl: "productTable.component.html"
 })
-export class ProductTableComponent {}
+export class ProductTableComponent {
+    constructor(private repo: ProductRepository) {}
+
+    getProducts(): Product[] {
+        return this.repo.getProducts();
+    }
+    deleteProduct(id:number) {
+        this.repo.deleteProduct(id);
+    }
+}
